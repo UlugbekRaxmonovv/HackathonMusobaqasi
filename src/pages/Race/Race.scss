@@ -1,0 +1,82 @@
+.City {
+    background-color: #151924;
+    width: 100%;
+    height: 100vh;
+    .city {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .start {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        .back {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          button {
+            color: #fff;
+            background-color: #caab30;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+          }
+          .icons {
+            font-size: 2.8em;
+            color: #fff;
+          }
+        }
+        .logo {
+          color: #fff;
+        }
+      }
+      .end {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .end-one {
+          color: #fff;
+          font-size: 1.8em;
+        }
+        .end-two {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+          padding: 20px;
+          .two-first {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            height: 400px;
+            .first-one {
+              img {
+                width: 100%;
+                height: 200px;
+                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+              }
+            }
+            .first-two {
+              padding: 0 30px;
+              h2 {
+                text-align: center;
+                padding: 10px 0;
+                color: red;
+              }
+              p {
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

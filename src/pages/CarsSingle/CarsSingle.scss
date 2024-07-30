@@ -1,0 +1,63 @@
+.CarsClick {
+    background-color: #151924;
+    height: 110vh;
+    padding-bottom: 50px;
+    .cars-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      button {
+        color: #151924;
+        background: #fcd24f;
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 18px;
+        border-radius: 26px;
+        cursor: pointer;
+        box-shadow: 0px 5px 0px #b86832;
+      }
+      h2 {
+        color: #fff;
+      }
+    }
+    .person-icon {
+      padding-top: 30px;
+      svg {
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+      }
+    }
+    .gm-info-all {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        h1 {
+          color: #fff;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        .left-bottom {
+          p {
+            color: #fff;
+            font-size: 24px;
+            padding-bottom: 18px;
+            span {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .right {
+        img {
+          width: 1000px;
+          height: 550px;
+          object-fit: cover;
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 13% 100%);
+        }
+      }
+    }
+  }
+  

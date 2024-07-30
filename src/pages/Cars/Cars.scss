@@ -1,0 +1,83 @@
+.Cars {
+    background-color: #151924;
+    height: 100vh;
+    padding-bottom: 50px;
+    .cars-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      button {
+        color: #151924;
+        background: #fcd24f;
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 18px;
+        border-radius: 26px;
+        cursor: pointer;
+        box-shadow: 0px 5px 0px #b86832;
+      }
+      h2 {
+        color: #fff;
+      }
+    }
+    .person-icon {
+      padding-top: 30px;
+      svg {
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+      }
+    }
+    .gm-auto-all {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0px;
+      .gm-title-top {
+        h3 {
+          color: crimson;
+          font-size: 24px;
+        }
+        p {
+          color: #fff;
+          max-width: 200px;
+          padding-top: 20px;
+          padding-bottom: 50px;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        img {
+          width: 300px;
+          height: 300px;
+          clip-path: polygon(0 0, 84% 0, 100% 100%, 16% 100%);
+          object-fit: cover;
+        }
+      }
+      .gm-title-bottom {
+        h3 {
+          color: crimson;
+          font-size: 24px;
+          padding-top: 15px;
+          text-align: center;
+        }
+        p {
+          color: #fff;
+          max-width: 200px;
+          padding-top: 20px;
+          padding-bottom: 50px;
+          margin: 0 auto;
+        }
+        img {
+          width: 300px;
+          height: 300px;
+          clip-path: polygon(0 0, 84% 0, 100% 100%, 16% 100%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  

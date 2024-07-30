@@ -1,0 +1,108 @@
+.Inform {
+    background-color: #151924;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    .inform {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .start {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        .back {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          button {
+            color: #fff;
+            background-color: #caab30;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+          }
+          .icons {
+            font-size: 2.8em;
+            color: #fff;
+          }
+        }
+        .logo {
+          color: #fff;
+        }
+      }
+      .informtion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .inform-img {
+          img {
+            width: 700px;
+            height: 400px;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          }
+        }
+        .word-h1 {
+          font-size: 1.2em;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        .word-btn-p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            color: #fff;
+            background-color: #f90000;
+            border: none;
+            padding: 20px 20px;
+            border-radius: 8px;
+          }
+          p {
+            color: #fff;
+            padding: 10px 20px;
+            width: 400px;
+          }
+        }
+        .word-p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .p-one {
+            display: flex;
+            flex-direction: column;
+            a {
+              text-decoration: none;
+              color: #fff;
+              padding: 10px;
+              font-size: 1em;
+            }
+          }
+          .p-two {
+            display: flex;
+            flex-direction: column;
+            a {
+              text-decoration: none;
+              color: #fff;
+              padding: 10px;
+              font-size: 1em;
+            }
+          }
+        }
+        .word-button {
+          button {
+            color: #fff;
+            background-color: #000000;
+            border: 2px solid #fff;
+            padding: 20px 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
