@@ -12,7 +12,7 @@ const Home = () => {
         <div className="als">
           <div className="container">
           <div className="home_all">
-           <Link to={'login'}> <FaRegCircleUser/></Link>
+           <Link to={'/'}> <FaRegCircleUser/></Link>
             </div>
            <div className="home">
           
@@ -29,7 +29,7 @@ const Home = () => {
             </div>
             <div className="column_all">
                <img src={rasm2} alt="" />
-               <Link to={'/area'}> <p>Race</p></Link>
+               <Link to={'/arealist'}> <p>Race</p></Link>
             </div>
             <div className="column_all">
                <img src={rasm} alt="" />

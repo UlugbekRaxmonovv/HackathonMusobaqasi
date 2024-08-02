@@ -13,6 +13,7 @@ import Inform from './pages/Inform/Inform'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Map from './pages/Map/Map'
+import AreaList from './pages/AreaList/AreaList'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Route exact path="/" element={<Auth />}>
       <Route exact path="/home" element={<Home />} />
         <Route exact path="area/:areaLocation" element={<Area />} />
+        <Route exact path="arealist" element={<AreaList />} />
         <Route exact path="cars" element={<Cars />} />
         <Route exact path="race" element={<Race />} />
         <Route exact path="cars/:id" element={<CarsClick />} />
