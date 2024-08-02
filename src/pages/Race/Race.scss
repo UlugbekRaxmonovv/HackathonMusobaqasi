@@ -44,7 +44,9 @@
         .end-two {
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          justify-content:center ;
+          gap: 20px;
+          flex-wrap: wrap;
           width: 100%;
           padding: 20px;
           .two-first {
@@ -56,9 +58,9 @@
             height: 400px;
             .first-one {
               img {
-                width: 100%;
+                width: 250px;
                 height: 200px;
-                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                clip-path: polygon(6% 0, 100% 0%, 95% 100%, 0% 100%);
               }
             }
             .first-two {

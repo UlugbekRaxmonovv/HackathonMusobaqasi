@@ -6,7 +6,7 @@ import { IoMdEyeOff } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useFormInputValue } from '../../components/hook/useFormInputValue';
-import axios from '../../components/api/index';
+import axios from '../../api/index';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 const initialState ={
@@ -32,7 +32,7 @@ const Login = () => {
              setValue(initialState)
              toast.success('Login successful');
              localStorage.setItem('token', res.data?.access)
-             navigate('/area')
+             navigate('/home')
         })
         .catch(err => {
              console.log(err)

@@ -8,7 +8,8 @@ import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import rasm from '../../assets/imgs/img.png'
 import { useFormInputValue } from '../../components/hook/useFormInputValue';
-import axios from '../../components/api/index';
+import axios from '../../api/index';
+import { toast } from 'react-toastify';
 
 const initialState ={
     username: '',
@@ -20,9 +21,6 @@ const Regester = () => {
     const {handelChange,setValue,value} = useFormInputValue(initialState)
     console.log(value);
     const [file,setFale]  = useState(null)
-    const [data,setData]= useState([])
-    console.log(data);
-     
     const handleUserName = (e) => {
         e.preventDefault();
         let form = new FormData();
@@ -36,11 +34,13 @@ const Regester = () => {
         }
         axios.post('/register/', form)
             .then(response => {
-                setData(response.data);
+                console.log(response);
                 setFale(initialState)
+                toast.success('User registered successfully!');
             })
             .catch(error => {
                 console.error('Error:', error);
+                toast.error('Failed to register user!');
             });
     }
 

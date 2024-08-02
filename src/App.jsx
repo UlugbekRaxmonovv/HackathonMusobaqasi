@@ -20,11 +20,12 @@ function App() {
     <>
     <ToastContainer/>
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/login" element={<Login />} />
+    
+      <Route exact path="/" element={<Login />} />
       <Route exact path="/regester" element={<Regester />} />
       <Route exact path="/" element={<Auth />}>
-        <Route exact path="area" element={<Area />} />
+      <Route exact path="/home" element={<Home />} />
+        <Route exact path="area/:areaLocation" element={<Area />} />
         <Route exact path="cars" element={<Cars />} />
         <Route exact path="race" element={<Race />} />
         <Route exact path="cars/:id" element={<CarsClick />} />

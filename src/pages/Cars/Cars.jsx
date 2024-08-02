@@ -1,12 +1,37 @@
 import { IoCaretBack } from "react-icons/io5";
 import { IoPersonCircleSharp } from "react-icons/io5";
-import cobalt from "../../assets/imgs/cobalt.webp";
-import nexia from "../../assets/imgs/nexia.jpg";
-import onix from "../../assets/imgs/onix.jpg";
-import kottaBola from "../../assets/imgs/kotta-bola.webp";
+import axios from "../../api/index";
 import "./Cars.scss";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Cars = () => {
+  const [cars, setCars] = useState([]);
+  console.log(cars);
+  useEffect(() =>{
+    axios
+    .get("/car/")
+   .then(response => setCars(response.data))
+   .catch(error => console.log(error)); 
+  },[])
+
+  let list = cars?.map(car =>(
+    <div className="gm-title-top" key={car.id}>
+  <Link to={`/cars/${car.id}`}>  <h3>{car.car_model}</h3></Link>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+      enim ad
+    </p>
+    {
+      car?.car_image   ?
+      <img src="https://w7.pngwing.com/pngs/787/429/png-transparent-lightning-mcqueen-mater-doc-hudson-cars-cars-3-red-lightning-mcqueen-car-desktop-wallpaper-pixar-thumbnail.png" alt="" />
+      :
+      <img src={car.car_image} alt="" />
+    }
+  
+  </div>
+  ))
   return (
     <div className="Cars">
       <div className="container">
@@ -21,42 +46,8 @@ const Cars = () => {
           <IoPersonCircleSharp />
         </div>
         <div className="gm-auto-all">
-          <div className="gm-title-top">
-            <h3>COBOLT</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad
-            </p>
-            <img src={cobalt} alt="" />
-          </div>
-          <div className="gm-title-bottom">
-            <img src={nexia} alt="" />
-            <h3>NEXIA</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad
-            </p>
-          </div>
-          <div className="gm-title-top">
-            <h3>ONIX</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad
-            </p>
-            <img src={onix} alt="" />
-          </div>
-          <div className="gm-title-bottom">
-            <img src={kottaBola} alt="" />
-            <h3>GENTRA</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad
-            </p>
-          </div>
+         {list}
+        
         </div>
       </div>
     </div>

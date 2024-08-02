@@ -1,8 +1,22 @@
 import { IoCaretBack, IoPersonCircleSharp } from "react-icons/io5";
 import kottaBola from '../../assets/imgs/kotta-bola.webp';
 import './CarsSingle.scss'
+import { useParams } from "react-router-dom";
+import axios  from "../../api/index";
+import { useEffect, useState } from "react";
 
 const CarsClick = () => {
+  const { id } = useParams();
+  const [car, setCar] = useState(null);
+  console.log(car);
+  useEffect(() =>{
+    axios
+    .get(`/car/${id}/`)
+   .then(response => setCar(response.data))
+   .catch(error => console.log(error));
+  })
+
+
   return (
     <div className="CarsClick">
       <div className="container">
@@ -18,27 +32,34 @@ const CarsClick = () => {
         </div>
         <div className="gm-info-all">
           <div className="left">
-            <h1>C O B O L T</h1>
+            <h1>{car?.car_model}</h1>
             <div className="left-bottom">
               <p>
-                POWER <span>180</span>
+                POWER <span>{car?.car_horse_power}</span>
               </p>
               <p>
-                COLOR <span>BLACK</span>
+                COLOR <span>{car?.car_color}</span>
               </p>
               <p>
-                WEIGHT <span>1100 KG</span>
+                WEIGHT <span>{car?.car_weight}</span>
               </p>
               <p>
-                SPEED <span>200 km/h</span>
+                SPEED <span>{car?.car_max_speed}</span>
               </p>
               <p>
-                BALANCE <span>1 253 $</span>
+                BALANCE <span>{car?.car_balance}</span>
               </p>
             </div>
           </div>
           <div className="right">
-            <img src={kottaBola} alt="" />
+            {
+              car?.car_image ? 
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeij2J2D4EGAL09LRODhPm5nJJcIg6-yR-Tw&s" alt="" />
+              :
+              <img src={car?.car_image } alt="" />
+
+            }
+          
           </div>
         </div>
       </div>

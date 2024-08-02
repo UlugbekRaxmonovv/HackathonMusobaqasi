@@ -19,6 +19,7 @@
           button {
             color: #fff;
             background-color: #caab30;
+            cursor: pointer;
             border: none;
             padding: 10px 20px;
             border-radius: 8px;
@@ -35,18 +36,25 @@
       .finish {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
         .type {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: 20px;
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: space-between;
+          // padding: 20px;
           .type-one {
             display: flex;
             flex-direction: column;
             align-items: center;
             color: #fff;
             margin-bottom: 40px;
+            font-size: 10px;
+            p{
+              font-size: 20px;
+            }
           }
           .type-two {
             display: flex;
@@ -89,7 +97,8 @@
           img {
             width: 400px;
             margin-bottom: 20px;
-            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(8% 0, 100% 0%, 93% 100%, 0% 100%);
+
           }
         }
       }
