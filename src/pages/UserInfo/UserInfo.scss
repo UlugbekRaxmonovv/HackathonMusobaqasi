@@ -1,0 +1,88 @@
+.userInfo{
+    background-color: #151924;
+    height: 100vh;
+    .btn_r{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .back{
+            display: flex;
+            align-items: center;
+            background-color: #FCD24F;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            border-bottom: 5px solid #EA8439;
+            .btn_f{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+               button{
+                border: none;
+                color: black;
+                background-color: #FCD24F;
+               }
+            }
+        }
+        h1{
+            color: white;
+            font-size: 40px;
+
+        }
+    }
+    .user_info{
+        display: flex;
+        align-items: self-start;
+        justify-content: center;
+        gap: 140px;
+        flex-wrap: wrap;
+        .info_img{
+            color: white;
+            .img{
+                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                width: 300px;
+                height: 250px;
+                background-color: white;
+                margin-top: 20%;
+            }
+            h1{
+                text-align: center;
+                margin-top: 40px;
+            }
+            .price{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                 width: 300px;
+                // width: 100%;
+                gap: 40px;
+                margin-left: -20%;
+                margin-top: 10%;
+                .price_r{
+                    p{
+                        font-size: 20px
+                    }
+                }
+            }
+            h1{
+                font-size: 40px;
+                color: crimson;
+            }
+            h4{
+                max-width:300px;
+                width: 100%;
+                margin-top: 30px;
+            }
+            .car{
+                margin-top: 20%;
+               img{
+                width: 300px;
+                height: 250px;
+                clip-path: polygon(0 0, 94% 0, 100% 100%, 6% 100%);
+               }
+            }
+        }
+    }
+}

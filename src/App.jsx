@@ -14,7 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Map from './pages/Map/Map'
 import AreaList from './pages/AreaList/AreaList'
-
+import UserInfo from './pages/UserInfo/UserInfo'
 function App() {
 
   return (
@@ -34,6 +34,7 @@ function App() {
         <Route exact path="inform" element={<Inform />} /> 
         <Route exact path="map" element={<Map />} />  
         <Route exact path="users" element={<Users />} />
+        <Route exact path="user/:id" element={<UserInfo />} />
       </Route>
     </Routes>
     
