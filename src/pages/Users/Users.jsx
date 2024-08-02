@@ -27,7 +27,14 @@ const Users = () => {
     const list = users.slice(0, 4).map((user) => (
         <div className="hammasi_w" key={user.id}>
             <div className="column_all">
-                <img src={user.image} alt="" />
+                {
+                    user.image ?
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXC1BNfYJFNfmDbxLtjoObSVsDeWfV2WFMwXLHQ5DHzrEwIgi3f8-aA3srjwsYOIbZvew&usqp=CAU" alt="" />
+:
+<img src={user.image} alt="" />
+                     
+                }
+              
             </div>
             <Link to={`/user/${user.id}`}> 
                 <h1>{user.username}</h1>

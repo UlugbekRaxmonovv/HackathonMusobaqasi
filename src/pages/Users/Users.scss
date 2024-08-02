@@ -28,11 +28,15 @@
             gap: 20px;
             .hammasi_w{
                 .column_all{
-                    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-                    width: 300px;
-                    height: 250px;
-                    background-color: white;
-                    margin-top: -25%;
+                   
+                    img{
+                        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                        width: 300px;
+                        height: 250px;
+                        background-color: white;
+                        margin-top: -25%;
+                        object-fit: contain;
+                    }
                 }
                 h1{
                     color: white;
